@@ -7,6 +7,7 @@ import { Profile } from "../components/Profile";
 import { ChallgenBox } from "../components/ChallgenBox";
 
 import styles from '../styles/pages/Home.module.css';
+import { CountdownProvider } from '../contexts/CountdownContext';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
 
      <ExperienceBar />
 
+    <CountdownProvider>
      <section>
        <div>
           <Profile />
@@ -28,6 +30,7 @@ export default function Home() {
          <ChallgenBox />
        </div>
      </section>
+     </CountdownProvider> 
    </div>
   )
 }
